@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35C8D36D1A0A47F7002F982D /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C8D36C1A0A47F7002F982D /* Device.swift */; };
 		95ACDFD419D7AE8900943F73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACDFD319D7AE8900943F73 /* AppDelegate.swift */; };
 		95ACDFD619D7AE8900943F73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACDFD519D7AE8900943F73 /* ViewController.swift */; };
 		95ACDFD919D7AE8900943F73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95ACDFD719D7AE8900943F73 /* Main.storyboard */; };
 		95ACDFDB19D7AE8900943F73 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95ACDFDA19D7AE8900943F73 /* Images.xcassets */; };
 		95ACDFDE19D7AE8900943F73 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95ACDFDC19D7AE8900943F73 /* LaunchScreen.xib */; };
 		95ACDFEA19D7AE8900943F73 /* DeviceTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACDFE919D7AE8900943F73 /* DeviceTypeTests.swift */; };
-		95ACDFF419D7AE9B00943F73 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACDFF319D7AE9B00943F73 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35C8D36C1A0A47F7002F982D /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		95ACDFCE19D7AE8900943F73 /* DeviceType.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceType.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95ACDFD219D7AE8900943F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95ACDFD319D7AE8900943F73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		95ACDFE319D7AE8900943F73 /* DeviceTypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceTypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95ACDFE819D7AE8900943F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95ACDFE919D7AE8900943F73 /* DeviceTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTypeTests.swift; sourceTree = "<group>"; };
-		95ACDFF319D7AE9B00943F73 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35C8D36B1A0A47F7002F982D /* DeviceType */ = {
+			isa = PBXGroup;
+			children = (
+				35C8D36C1A0A47F7002F982D /* Device.swift */,
+			);
+			path = DeviceType;
+			sourceTree = "<group>";
+		};
 		95ACDFC519D7AE8900943F73 = {
 			isa = PBXGroup;
 			children = (
@@ -79,9 +87,9 @@
 		95ACDFD019D7AE8900943F73 /* DeviceType */ = {
 			isa = PBXGroup;
 			children = (
+				35C8D36B1A0A47F7002F982D /* DeviceType */,
 				95ACDFD319D7AE8900943F73 /* AppDelegate.swift */,
 				95ACDFD519D7AE8900943F73 /* ViewController.swift */,
-				95ACDFF319D7AE9B00943F73 /* Device.swift */,
 				95ACDFD719D7AE8900943F73 /* Main.storyboard */,
 				95ACDFDA19D7AE8900943F73 /* Images.xcassets */,
 				95ACDFDC19D7AE8900943F73 /* LaunchScreen.xib */,
@@ -215,7 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95ACDFF419D7AE9B00943F73 /* Device.swift in Sources */,
+				35C8D36D1A0A47F7002F982D /* Device.swift in Sources */,
 				95ACDFD619D7AE8900943F73 /* ViewController.swift in Sources */,
 				95ACDFD419D7AE8900943F73 /* AppDelegate.swift in Sources */,
 			);

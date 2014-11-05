@@ -113,13 +113,13 @@ class Device : NSObject {
 func testDevice()
 {
     if Device.currentDevice.isGE(version: "8.0") {
-        println(" >= 8.0")
+        println("version >= 8.0")
     }
     else if Device.currentDevice.isGE(version: "7.0") {
-        println(" == 7.0")
+        println("version == 7.0")
     }
     else {
-        println(" < 7.0")
+        println("version < 7.0")
     }
     
     if Device.currentDevice.isPad() {
