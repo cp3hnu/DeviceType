@@ -109,34 +109,39 @@ class Device : NSObject {
     }
 }
 
-//测试函数
+//Test Function
 func testDevice()
 {
-    if Device.currentDevice.isGE(version: "8.0") {
+    var device: Device = Device.currentDevice;
+    
+    //version
+    if device.isGE(version: "8.0") {
         println("version >= 8.0")
     }
-    else if Device.currentDevice.isGE(version: "7.0") {
+    else if device.isGE(version: "7.0") {
         println("version == 7.0")
     }
     else {
         println("version < 7.0")
     }
     
-    if Device.currentDevice.isPad() {
+    //iPad or iPhone
+    if device.isPad() {
         println("iPad")
         
-        if Device.currentDevice.isBigPad() {
-            println("Big iPad")
-        }
-        else if Device.currentDevice.isPadMini() {
+        if device.isPadMini() {
             println("iPad mini")
         }
+        else if device.isBigPad() {
+            println("9.7-inch iPad")
+        }
     }
-    else if (Device.currentDevice.isPhone()) {
+    else if (device.isPhone()) {
         println("iPhone")
     }
     
-    var type = Device.currentDevice.deviceType
+    //Device Type
+    var type = device.deviceType
     
     switch type {
     case Device.DeviceType.DT_iPhone4S:         println("iPhone4S")
