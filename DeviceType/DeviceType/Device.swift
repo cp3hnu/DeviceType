@@ -9,30 +9,25 @@
 import Foundation
 import UIKit
 
+enum DeviceType: Int
+{
+    case DT_UNKNOWN = 0
+    case DT_iPhone4S          //iPhone4S、iPhone4
+    case DT_iPhone5           //iPhone5、iPhone5C和iPhone5S
+    case DT_iPhone6           //iPhone6
+    case DT_iPhone6_Plus      //iPhone6 Plus
+    case DT_iPad              //iPad1、iPad2
+    case DT_iPad_Mini         //iPad mini1
+    case DT_iPad_Retina       //New iPad、iPad4和iPad Air
+    case DT_iPad_Mini_Retina  //iPad mini2
+}
+
 class Device : NSObject {
     
-    enum DeviceType: Int
-    {
-        case DT_UNKNOWN = 0
-        case DT_iPhone4S          //iPhone4S、iPhone4
-        case DT_iPhone5           //iPhone5、iPhone5C和iPhone5S
-        case DT_iPhone6           //iPhone6
-        case DT_iPhone6_Plus      //iPhone6 Plus
-        case DT_iPad              //iPad1、iPad2
-        case DT_iPad_Mini         //iPad mini1
-        case DT_iPad_Retina       //New iPad、iPad4和iPad Air
-        case DT_iPad_Mini_Retina  //iPad mini2
-    }
+    static let currentDevice = Device()
     
-    struct Singleton {
-        static let _sharedInstance = Device()
-    }
-    
-    /**
-    获取当前设备(单例)
-    */
-    class var currentDevice : Device {
-        return Singleton._sharedInstance
+    private override init() {
+        super.init()
     }
     
     /**
@@ -77,7 +72,7 @@ class Device : NSObject {
     */
     func isPadMini() -> Bool {
         if isPad() {
-            var type = deviceType
+            let type = deviceType
             if type == .DT_iPad_Mini || type == .DT_iPad_Mini_Retina {
                 return true
             }
@@ -100,11 +95,11 @@ class Device : NSObject {
     /**
     判断当前设备的系统版本是否大于或者等于#version
     */
-    func isGE(var #version: String) -> Bool {
+    func isGE(version version: String) -> Bool {
         return compare(version: version) != .OrderedAscending
     }
     
-    func compare(var #version: String) -> NSComparisonResult {
+    private func compare(version version: String) -> NSComparisonResult {
         return UIDevice.currentDevice().systemVersion.compare(version, options: NSStringCompareOptions.NumericSearch)
     }
 }
@@ -112,47 +107,56 @@ class Device : NSObject {
 //Test Function
 func testDevice()
 {
-    var device: Device = Device.currentDevice;
+    let device: Device = Device.currentDevice;
     
     //version
     if device.isGE(version: "8.0") {
-        println("version >= 8.0")
+        print("version >= 8.0")
     }
     else if device.isGE(version: "7.0") {
-        println("version == 7.0")
+        print("version == 7.0")
     }
     else {
-        println("version < 7.0")
+        print("version < 7.0")
     }
     
     //iPad or iPhone
     if device.isPad() {
-        println("iPad")
+        print("iPad")
         
         if device.isPadMini() {
-            println("iPad mini")
+            print("iPad mini")
         }
         else if device.isBigPad() {
-            println("9.7-inch iPad")
+            print("9.7-inch iPad")
         }
     }
     else if (device.isPhone()) {
-        println("iPhone")
+        print("iPhone")
     }
     
     //Device Type
-    var type = device.deviceType
+    let type = device.deviceType
     
     switch type {
-    case Device.DeviceType.DT_iPhone4S:         println("iPhone4S")
-    case Device.DeviceType.DT_iPhone5:          println("iPhone5")
-    case Device.DeviceType.DT_iPhone6:          println("iPhone6")
-    case Device.DeviceType.DT_iPhone6_Plus:     println("iPhone6_Plus")
-    case Device.DeviceType.DT_iPad:             println("iPad")
-    case Device.DeviceType.DT_iPad_Mini:        println("iPad_Mini")
-    case Device.DeviceType.DT_iPad_Retina:      println("iPad_Retina")
-    case Device.DeviceType.DT_iPad_Mini_Retina: println("iPad_Mini_Retina")
-    default:                                    println("Unknown")
+    case DeviceType.DT_iPhone4S:
+        print("iPhone4S")
+    case DeviceType.DT_iPhone5:
+        print("iPhone5")
+    case DeviceType.DT_iPhone6:
+        print("iPhone6")
+    case DeviceType.DT_iPhone6_Plus:
+        print("iPhone6_Plus")
+    case DeviceType.DT_iPad:
+        print("iPad")
+    case DeviceType.DT_iPad_Mini:
+        print("iPad_Mini")
+    case DeviceType.DT_iPad_Retina:
+        print("iPad_Retina")
+    case DeviceType.DT_iPad_Mini_Retina:
+        print("iPad_Mini_Retina")
+    default:
+        print("Unknown")
     }
 }
 
