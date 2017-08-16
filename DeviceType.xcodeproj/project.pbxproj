@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35C8D36D1A0A47F7002F982D /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C8D36C1A0A47F7002F982D /* Device.swift */; };
+		35C8D36D1A0A47F7002F982D /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C8D36C1A0A47F7002F982D /* UIDevice.swift */; };
 		95ACDFD419D7AE8900943F73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACDFD319D7AE8900943F73 /* AppDelegate.swift */; };
 		95ACDFD619D7AE8900943F73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACDFD519D7AE8900943F73 /* ViewController.swift */; };
 		95ACDFD919D7AE8900943F73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95ACDFD719D7AE8900943F73 /* Main.storyboard */; };
@@ -27,7 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		35C8D36C1A0A47F7002F982D /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		35C8D36C1A0A47F7002F982D /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		95ACDFCE19D7AE8900943F73 /* DeviceType.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceType.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95ACDFD219D7AE8900943F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95ACDFD319D7AE8900943F73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		35C8D36B1A0A47F7002F982D /* DeviceType */ = {
 			isa = PBXGroup;
 			children = (
-				35C8D36C1A0A47F7002F982D /* Device.swift */,
+				35C8D36C1A0A47F7002F982D /* UIDevice.swift */,
 			);
 			path = DeviceType;
 			sourceTree = "<group>";
@@ -169,11 +169,12 @@
 			attributes = {
 				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = ZeroOne;
 				TargetAttributes = {
 					95ACDFCD19D7AE8900943F73 = {
 						CreatedOnToolsVersion = 6.0.1;
+						LastSwiftMigration = 0830;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -182,6 +183,7 @@
 					};
 					95ACDFE219D7AE8900943F73 = {
 						CreatedOnToolsVersion = 6.0.1;
+						LastSwiftMigration = 0830;
 						TestTargetID = 95ACDFCD19D7AE8900943F73;
 					};
 				};
@@ -230,7 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35C8D36D1A0A47F7002F982D /* Device.swift in Sources */,
+				35C8D36D1A0A47F7002F982D /* UIDevice.swift in Sources */,
 				95ACDFD619D7AE8900943F73 /* ViewController.swift in Sources */,
 				95ACDFD419D7AE8900943F73 /* AppDelegate.swift in Sources */,
 			);
@@ -287,8 +289,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -297,6 +301,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -331,8 +336,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -340,6 +347,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -349,6 +357,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -363,6 +372,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZeroOne.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -375,6 +385,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZeroOne.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -391,6 +402,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZeroOne.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeviceType.app/DeviceType";
 			};
 			name = Debug;
@@ -404,6 +416,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZeroOne.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeviceType.app/DeviceType";
 			};
 			name = Release;
