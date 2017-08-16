@@ -25,9 +25,8 @@ public enum DeviceType: Int
 }
 
 extension UIDevice {
-    /**
-     根据屏幕分辨率判断设备类型
-     */
+    
+    /// 根据屏幕分辨率判断设备类型
     public var deviceType: DeviceType {
         guard let size = UIScreen.main.currentMode?.size else {
             return .dt_unknown
@@ -48,60 +47,49 @@ extension UIDevice {
         }
     }
     
-    /**
-     判断当前设备是不是iPhone设备
-     */
+    /// 判断当前设备是不是iPhone设备
     public var isPhone: Bool {
         return UIDevice.current.userInterfaceIdiom == .phone
     }
     
-    /**
-     判断当前设备是不是iPad设备
-     */
+    /// 判断当前设备是不是iPad设备
     public var isPad: Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
     
-    /**
-     判断当前设备是不是iPad mini
-     */
+    /// 判断当前设备是不是iPad mini
     public var isPadMini: Bool {
         return deviceType == .dt_iPad_Mini || deviceType == .dt_iPad_Mini_Retina
     }
     
-    /**
-     判断当前设备是不是iPhone4
-     */
+    /// 判断当前设备是不是iPhone4
     public var isIPhone4: Bool {
         return deviceType == .dt_iPhone4
     }
     
-    /**
-     判断当前设备是不是iPhone5
-     */
+    /// 判断当前设备是不是iPhone5
     public var isIPhone5: Bool {
         return deviceType == .dt_iPhone5
     }
     
-    /**
-     判断当前设备是不是iPhone6
-     */
+    ///  判断当前设备是不是iPhone6
     public var isIPhone6: Bool {
         return deviceType == .dt_iPhone6
     }
     
-    /**
-     判断当前设备是不是iPhone6 Plus
-     */
+    /// 判断当前设备是不是iPhone6 Plus
     public var isIPhone6Plus: Bool {
         return deviceType == .dt_iPhone6_Plus
+    }
+    
+    /// 判断当前设备是不是横屏
+    public var isLandscape: Bool {
+        return UIDeviceOrientationIsLandscape(orientation)
     }
 }
 
 extension UIDevice {
-    /**
-     判断当前设备的系统版本是否大于或者等于version
-     */
+    /// 判断当前设备的系统版本是否大于或者等于version
     public func isGE(_ version: String) -> Bool {
         return compare(version: version) != .orderedAscending
     }
