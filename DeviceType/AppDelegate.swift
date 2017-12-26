@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         testDevice();
         
+        print(UIScreen.main.currentMode?.size ?? "nil")
+        
         return true
     }
 
@@ -88,6 +90,8 @@ extension AppDelegate {
             print("iPhone6")
         case DeviceType.dt_iPhone6_Plus:
             print("iPhone6_Plus")
+        case DeviceType.dt_iPhone_X:
+            print("iPhoneX")
         case DeviceType.dt_iPad:
             print("iPad")
         case DeviceType.dt_iPad_Mini:

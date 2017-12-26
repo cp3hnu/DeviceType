@@ -16,12 +16,14 @@ public enum DeviceType: Int
     case dt_iPhone5             //iPhone5、iPhone5C和iPhone5S
     case dt_iPhone6             //iPhone6、iPhone6S、iPhone7
     case dt_iPhone6_Plus        //iPhone6 Plus、iPhone6S Plus、iPhone7 Plus
+    case dt_iPhone_X            //iPhoneX
     case dt_iPad                //iPad1、iPad2
     case dt_iPad_Mini           //iPad mini1
     case dt_iPad_Retina         //New iPad、iPad4和iPad Air
     case dt_iPad_Mini_Retina    //iPad mini2
     case dt_iPad_Pro_12_9_Inch  //iPad Pro 12.9
     case dt_iPad_Pro_10_5_Inch  //iPad Pro 10.5
+    
 }
 
 extension UIDevice {
@@ -37,6 +39,7 @@ extension UIDevice {
         case CGSize(width: 640 , height: 1136): return .dt_iPhone5
         case CGSize(width: 750 , height: 1334): return .dt_iPhone6
         case CGSize(width: 1242, height: 2208): return .dt_iPhone6_Plus
+        case CGSize(width: 1125, height: 2436): return .dt_iPhone_X
         case CGSize(width: 1024, height: 768 ): return .dt_iPad
         case CGSize(width: 768 , height: 1024): return .dt_iPad_Mini
         case CGSize(width: 2048, height: 1536): return .dt_iPad_Retina
