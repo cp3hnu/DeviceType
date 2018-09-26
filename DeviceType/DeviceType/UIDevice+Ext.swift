@@ -23,7 +23,6 @@ public enum DeviceType: Int
     case dt_iPad_Mini_Retina    //iPad mini2
     case dt_iPad_Pro_12_9_Inch  //iPad Pro 12.9
     case dt_iPad_Pro_10_5_Inch  //iPad Pro 10.5
-    
 }
 
 extension UIDevice {
@@ -85,9 +84,24 @@ extension UIDevice {
         return deviceType == .dt_iPhone6_Plus
     }
     
+    /// 判断当前设备是不是iPhoneX
+    public var isIPhoneX: Bool {
+        return deviceType == .dt_iPhone_X
+    }
+    
     /// 判断当前设备是不是横屏
     public var isLandscape: Bool {
-        return UIDeviceOrientationIsLandscape(orientation)
+        return orientation.isLandscape
+    }
+    
+    /// 状态栏的高度
+    public var statusBarHeight: CGFloat {
+        return isIPhoneX ? 44 : 20
+    }
+    
+    /// 下巴的高度
+    public var jawHeight: CGFloat {
+        return isIPhoneX ? 34 : 0
     }
 }
 
@@ -102,17 +116,20 @@ extension UIDevice {
     }
 }
 
-extension UIDevice {
-    public var appVersion: String {
+extension Bundle {
+    public static var appVersion: String {
         return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
     }
     
-    public var appName: String {
+    public static var appName: String {
         return Bundle.main.infoDictionary?["CFBundleDisplayName"] as! String
     }
     
-    public var bundleID: String {
+    public static var bundleID: String {
         return Bundle.main.infoDictionary?["CFBundleIdentifier"] as! String
     }
 }
+
+
+
 
