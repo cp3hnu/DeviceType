@@ -16,7 +16,9 @@ public enum DeviceType: Int
     case dt_iPhone5             //iPhone5、iPhone5C和iPhone5S
     case dt_iPhone6             //iPhone6、iPhone6S、iPhone7
     case dt_iPhone6_Plus        //iPhone6 Plus、iPhone6S Plus、iPhone7 Plus
-    case dt_iPhone_X            //iPhoneX
+    case dt_iPhone_X            //iPhoneX、iPhoneXS
+    case dt_iPhone_XR           //iPhoneXR
+    case dt_iPhone_XS_Max       //iPhoneXS Max
     case dt_iPad                //iPad1、iPad2
     case dt_iPad_Mini           //iPad mini1
     case dt_iPad_Retina         //New iPad、iPad4和iPad Air
@@ -39,6 +41,8 @@ extension UIDevice {
         case CGSize(width: 750 , height: 1334): return .dt_iPhone6
         case CGSize(width: 1242, height: 2208): return .dt_iPhone6_Plus
         case CGSize(width: 1125, height: 2436): return .dt_iPhone_X
+        case CGSize(width: 828 , height: 1792): return .dt_iPhone_XR
+        case CGSize(width: 1242, height: 2688): return .dt_iPhone_XS_Max
         case CGSize(width: 1024, height: 768 ): return .dt_iPad
         case CGSize(width: 768 , height: 1024): return .dt_iPad_Mini
         case CGSize(width: 2048, height: 1536): return .dt_iPad_Retina
@@ -87,6 +91,21 @@ extension UIDevice {
     /// 判断当前设备是不是iPhoneX
     public var isIPhoneX: Bool {
         return deviceType == .dt_iPhone_X
+    }
+    
+    /// 判断当前设备是不是iPhoneXR
+    public var isIPhoneXR: Bool {
+        return deviceType == .dt_iPhone_XR
+    }
+    
+    /// 判断当前设备是不是iPhoneXS Max
+    public var isIPhoneXSMax: Bool {
+        return deviceType == .dt_iPhone_XS_Max
+    }
+    
+    /// 判断当前设备是不是刘海屏
+    public var isNotchScreen: Bool {
+        return isIPhoneX || isIPhoneXR || isIPhoneXSMax
     }
     
     /// 判断当前设备是不是横屏
