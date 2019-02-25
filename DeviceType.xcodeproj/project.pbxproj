@@ -12,8 +12,8 @@
 		95ACDFD619D7AE8900943F73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACDFD519D7AE8900943F73 /* ViewController.swift */; };
 		95ACDFD919D7AE8900943F73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95ACDFD719D7AE8900943F73 /* Main.storyboard */; };
 		95ACDFDB19D7AE8900943F73 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95ACDFDA19D7AE8900943F73 /* Images.xcassets */; };
-		95ACDFDE19D7AE8900943F73 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95ACDFDC19D7AE8900943F73 /* LaunchScreen.xib */; };
 		95ACDFEA19D7AE8900943F73 /* DeviceTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACDFE919D7AE8900943F73 /* DeviceTypeTests.swift */; };
+		DBA310F3221E532800076C90 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA310F2221E532800076C90 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +34,10 @@
 		95ACDFD519D7AE8900943F73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		95ACDFD819D7AE8900943F73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95ACDFDA19D7AE8900943F73 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		95ACDFDD19D7AE8900943F73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		95ACDFE319D7AE8900943F73 /* DeviceTypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceTypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95ACDFE819D7AE8900943F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95ACDFE919D7AE8900943F73 /* DeviceTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTypeTests.swift; sourceTree = "<group>"; };
+		DBA310F2221E532800076C90 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +91,8 @@
 				95ACDFD319D7AE8900943F73 /* AppDelegate.swift */,
 				95ACDFD519D7AE8900943F73 /* ViewController.swift */,
 				95ACDFD719D7AE8900943F73 /* Main.storyboard */,
+				DBA310F2221E532800076C90 /* Launch Screen.storyboard */,
 				95ACDFDA19D7AE8900943F73 /* Images.xcassets */,
-				95ACDFDC19D7AE8900943F73 /* LaunchScreen.xib */,
 				95ACDFD119D7AE8900943F73 /* Supporting Files */,
 			);
 			path = DeviceType;
@@ -214,8 +214,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA310F3221E532800076C90 /* Launch Screen.storyboard in Resources */,
 				95ACDFD919D7AE8900943F73 /* Main.storyboard in Resources */,
-				95ACDFDE19D7AE8900943F73 /* LaunchScreen.xib in Resources */,
 				95ACDFDB19D7AE8900943F73 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,14 +265,6 @@
 				95ACDFD819D7AE8900943F73 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		95ACDFDC19D7AE8900943F73 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				95ACDFDD19D7AE8900943F73 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -387,7 +379,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RJF3498JFC;
 				INFOPLIST_FILE = DeviceType/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cp3hnu.DeviceType;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -402,7 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RJF3498JFC;
 				INFOPLIST_FILE = DeviceType/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cp3hnu.DeviceType;
 				PRODUCT_NAME = "$(TARGET_NAME)";

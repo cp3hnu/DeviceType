@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         testDevice();
         
         print(UIScreen.main.currentMode?.size ?? "nil")
+         print(UIScreen.main.bounds.size)
+        print(UIScreen.main.nativeBounds.size, UIScreen.main.scale, UIScreen.main.nativeScale)
         
         return true
     }

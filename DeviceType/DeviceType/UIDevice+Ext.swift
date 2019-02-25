@@ -42,6 +42,7 @@ extension UIDevice {
         case CGSize(width: 1242, height: 2208): return .dt_iPhone6_Plus
         case CGSize(width: 1125, height: 2436): return .dt_iPhone_X
         case CGSize(width: 828 , height: 1792): return .dt_iPhone_XR
+        case CGSize(width: 750 , height: 1624): return .dt_iPhone_XR
         case CGSize(width: 1242, height: 2688): return .dt_iPhone_XS_Max
         case CGSize(width: 1024, height: 768 ): return .dt_iPad
         case CGSize(width: 768 , height: 1024): return .dt_iPad_Mini
