@@ -12,29 +12,17 @@
 		95ACDFD619D7AE8900943F73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACDFD519D7AE8900943F73 /* ViewController.swift */; };
 		95ACDFD919D7AE8900943F73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95ACDFD719D7AE8900943F73 /* Main.storyboard */; };
 		95ACDFDB19D7AE8900943F73 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95ACDFDA19D7AE8900943F73 /* Images.xcassets */; };
-		95ACDFEA19D7AE8900943F73 /* DeviceTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACDFE919D7AE8900943F73 /* DeviceTypeTests.swift */; };
 		DBA310F3221E532800076C90 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA310F2221E532800076C90 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		95ACDFE419D7AE8900943F73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 95ACDFC619D7AE8900943F73 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 95ACDFCD19D7AE8900943F73;
-			remoteInfo = DeviceType;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		35C8D36C1A0A47F7002F982D /* UIDevice+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Ext.swift"; sourceTree = "<group>"; };
-		95ACDFCE19D7AE8900943F73 /* DeviceType.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceType.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95ACDFCE19D7AE8900943F73 /* DeviceTypeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceTypeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95ACDFD219D7AE8900943F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95ACDFD319D7AE8900943F73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95ACDFD519D7AE8900943F73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		95ACDFD819D7AE8900943F73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95ACDFDA19D7AE8900943F73 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		95ACDFE319D7AE8900943F73 /* DeviceTypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceTypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95ACDFE819D7AE8900943F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95ACDFE919D7AE8900943F73 /* DeviceTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTypeTests.swift; sourceTree = "<group>"; };
 		DBA310F2221E532800076C90 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -42,13 +30,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		95ACDFCB19D7AE8900943F73 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95ACDFE019D7AE8900943F73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,8 +59,7 @@
 		95ACDFCF19D7AE8900943F73 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95ACDFCE19D7AE8900943F73 /* DeviceType.app */,
-				95ACDFE319D7AE8900943F73 /* DeviceTypeTests.xctest */,
+				95ACDFCE19D7AE8900943F73 /* DeviceTypeDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,9 +106,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		95ACDFCD19D7AE8900943F73 /* DeviceType */ = {
+		95ACDFCD19D7AE8900943F73 /* DeviceTypeDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95ACDFED19D7AE8900943F73 /* Build configuration list for PBXNativeTarget "DeviceType" */;
+			buildConfigurationList = 95ACDFED19D7AE8900943F73 /* Build configuration list for PBXNativeTarget "DeviceTypeDemo" */;
 			buildPhases = (
 				95ACDFCA19D7AE8900943F73 /* Sources */,
 				95ACDFCB19D7AE8900943F73 /* Frameworks */,
@@ -138,28 +118,10 @@
 			);
 			dependencies = (
 			);
-			name = DeviceType;
+			name = DeviceTypeDemo;
 			productName = DeviceType;
-			productReference = 95ACDFCE19D7AE8900943F73 /* DeviceType.app */;
+			productReference = 95ACDFCE19D7AE8900943F73 /* DeviceTypeDemo.app */;
 			productType = "com.apple.product-type.application";
-		};
-		95ACDFE219D7AE8900943F73 /* DeviceTypeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 95ACDFF019D7AE8900943F73 /* Build configuration list for PBXNativeTarget "DeviceTypeTests" */;
-			buildPhases = (
-				95ACDFDF19D7AE8900943F73 /* Sources */,
-				95ACDFE019D7AE8900943F73 /* Frameworks */,
-				95ACDFE119D7AE8900943F73 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				95ACDFE519D7AE8900943F73 /* PBXTargetDependency */,
-			);
-			name = DeviceTypeTests;
-			productName = DeviceTypeTests;
-			productReference = 95ACDFE319D7AE8900943F73 /* DeviceTypeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -175,24 +137,18 @@
 					95ACDFCD19D7AE8900943F73 = {
 						CreatedOnToolsVersion = 6.0.1;
 						DevelopmentTeam = RJF3498JFC;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
 							};
 						};
 					};
-					95ACDFE219D7AE8900943F73 = {
-						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = RJF3498JFC;
-						LastSwiftMigration = 1000;
-						TestTargetID = 95ACDFCD19D7AE8900943F73;
-					};
 				};
 			};
 			buildConfigurationList = 95ACDFC919D7AE8900943F73 /* Build configuration list for PBXProject "DeviceType" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -203,8 +159,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				95ACDFCD19D7AE8900943F73 /* DeviceType */,
-				95ACDFE219D7AE8900943F73 /* DeviceTypeTests */,
+				95ACDFCD19D7AE8900943F73 /* DeviceTypeDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -217,13 +172,6 @@
 				DBA310F3221E532800076C90 /* Launch Screen.storyboard in Resources */,
 				95ACDFD919D7AE8900943F73 /* Main.storyboard in Resources */,
 				95ACDFDB19D7AE8900943F73 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95ACDFE119D7AE8900943F73 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,23 +188,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95ACDFDF19D7AE8900943F73 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				95ACDFEA19D7AE8900943F73 /* DeviceTypeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		95ACDFE519D7AE8900943F73 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 95ACDFCD19D7AE8900943F73 /* DeviceType */;
-			targetProxy = 95ACDFE419D7AE8900943F73 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		95ACDFD719D7AE8900943F73 /* Main.storyboard */ = {
@@ -383,8 +315,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cp3hnu.DeviceType;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -398,42 +329,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cp3hnu.DeviceType;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		95ACDFF119D7AE8900943F73 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = RJF3498JFC;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DeviceTypeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ZeroOne.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeviceType.app/DeviceType";
-			};
-			name = Debug;
-		};
-		95ACDFF219D7AE8900943F73 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = RJF3498JFC;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = DeviceTypeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ZeroOne.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeviceType.app/DeviceType";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -449,20 +345,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95ACDFED19D7AE8900943F73 /* Build configuration list for PBXNativeTarget "DeviceType" */ = {
+		95ACDFED19D7AE8900943F73 /* Build configuration list for PBXNativeTarget "DeviceTypeDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				95ACDFEE19D7AE8900943F73 /* Debug */,
 				95ACDFEF19D7AE8900943F73 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		95ACDFF019D7AE8900943F73 /* Build configuration list for PBXNativeTarget "DeviceTypeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				95ACDFF119D7AE8900943F73 /* Debug */,
-				95ACDFF219D7AE8900943F73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
