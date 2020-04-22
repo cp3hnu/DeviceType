@@ -82,29 +82,7 @@ extension AppDelegate {
         
         //Device Type
         let type = device.deviceType
-        
-        switch type {
-        case DeviceType.dt_iPhone4:
-            print("iPhone4S")
-        case DeviceType.dt_iPhone5:
-            print("iPhone5")
-        case DeviceType.dt_iPhone6:
-            print("iPhone6")
-        case DeviceType.dt_iPhone6_Plus:
-            print("iPhone6_Plus")
-        case DeviceType.dt_iPhone_X:
-            print("iPhoneX")
-        case DeviceType.dt_iPad:
-            print("iPad")
-        case DeviceType.dt_iPad_Mini:
-            print("iPad_Mini")
-        case DeviceType.dt_iPad_Retina:
-            print("iPad_Retina")
-        case DeviceType.dt_iPad_Mini_Retina:
-            print("iPad_Mini_Retina")
-        default:
-            print("Unknown")
-        }
+        print(type)
     }
 }
 

@@ -9,22 +9,56 @@
 import Foundation
 import UIKit
 
-public enum DeviceType: Int
+public enum DeviceType: Int, CustomStringConvertible
 {
     case dt_unknown = 0
-    case dt_iPhone4             //iPhone4、iPhone4S
-    case dt_iPhone5             //iPhone5、iPhone5C和iPhone5S
-    case dt_iPhone6             //iPhone6、iPhone6S、iPhone7
-    case dt_iPhone6_Plus        //iPhone6 Plus、iPhone6S Plus、iPhone7 Plus
-    case dt_iPhone_X            //iPhoneX、iPhoneXS
-    case dt_iPhone_XR           //iPhoneXR
-    case dt_iPhone_XS_Max       //iPhoneXS Max
-    case dt_iPad                //iPad1、iPad2
-    case dt_iPad_Mini           //iPad mini1
-    case dt_iPad_Retina         //New iPad、iPad4和iPad Air
-    case dt_iPad_Mini_Retina    //iPad mini2
-    case dt_iPad_Pro_12_9_Inch  //iPad Pro 12.9
-    case dt_iPad_Pro_10_5_Inch  //iPad Pro 10.5
+    case dt_iPhone4             // iPhone4/4S
+    case dt_iPhone5             // iPhone5/5C/5S/SE
+    case dt_iPhone6             // iPhone6/6S/7/8/SE2
+    case dt_iPhone6_Plus        // iPhone6/6S/7/8 Plus
+    case dt_iPhone_X            // iPhoneX/XS/11 Pro
+    case dt_iPhone_XR           // iPhoneXR/11
+    case dt_iPhone_XS_Max       // iPhoneXS/11 Pro Max
+    // iPad
+    case dt_iPad                // iPad 1~2代或iPad mini 1代
+    case dt_iPad_Retina         // iPad 3~6代或iPad Air 1~2代或iPad mini2~5代
+    case dt_iPad_Pro_12_9_Inch  // iPad Pro 12.9 1~4代
+    case dt_iPad_Pro_11_Inch    // iPad Pro 11 1~2代
+    case dt_iPad_Pro_10_5_Inch  // iPad Pro 10.5或iPad Air 3代
+    case dt_iPad_10_2_Inch      // iPad 7代
+    
+    public var description: String {
+        switch self {
+        case .dt_unknown:
+            return "未知型号"
+        case .dt_iPhone4:
+            return "iPhone4/4S"
+        case .dt_iPhone5:
+            return "iPhone5/5C/5S/SE"
+        case .dt_iPhone6:
+            return "iPhone6/6S/7/8/SE2"
+        case .dt_iPhone6_Plus:
+            return "iPhone6/6S/7/8 Plus"
+        case .dt_iPhone_X:
+            return "iPhoneX/XS/11 Pro"
+        case .dt_iPhone_XR:
+            return "iPhoneXR/11"
+        case .dt_iPhone_XS_Max:
+            return "iPhoneXS/11 Pro Max"
+        case .dt_iPad:
+            return "iPad 1~2代或iPad mini 1代"
+        case .dt_iPad_Retina:
+            return "iPad 3~6代或iPad Air 1~2代或iPad mini2~5代"
+        case .dt_iPad_Pro_12_9_Inch:
+            return "iPad Pro 12.9 1~4代"
+        case .dt_iPad_Pro_11_Inch:
+            return "iPad Pro 11 1~2代"
+        case .dt_iPad_Pro_10_5_Inch:
+            return "iPad Pro 10.5或iPad Air 3代"
+        case .dt_iPad_10_2_Inch:
+            return "iPad 7代"
+        }
+    }
 }
 
 extension UIDevice {
@@ -36,6 +70,7 @@ extension UIDevice {
         }
         
         switch size {
+        // iPhone
         case CGSize(width: 640 , height: 960 ): return .dt_iPhone4
         case CGSize(width: 640 , height: 1136): return .dt_iPhone5
         case CGSize(width: 750 , height: 1334): return .dt_iPhone6
@@ -44,29 +79,25 @@ extension UIDevice {
         case CGSize(width: 828 , height: 1792): return .dt_iPhone_XR
         case CGSize(width: 750 , height: 1624): return .dt_iPhone_XR
         case CGSize(width: 1242, height: 2688): return .dt_iPhone_XS_Max
-        case CGSize(width: 1024, height: 768 ): return .dt_iPad
-        case CGSize(width: 768 , height: 1024): return .dt_iPad_Mini
-        case CGSize(width: 2048, height: 1536): return .dt_iPad_Retina
-        case CGSize(width: 1536, height: 2048): return .dt_iPad_Mini_Retina
-        case CGSize(width: 2732, height: 2048): return .dt_iPad_Pro_12_9_Inch
-        case CGSize(width: 2224, height: 1668): return .dt_iPad_Pro_10_5_Inch
+        // iPad
+        case CGSize(width: 768 , height: 1024): return .dt_iPad
+        case CGSize(width: 1536, height: 2048): return .dt_iPad_Retina
+        case CGSize(width: 2048, height: 2732): return .dt_iPad_Pro_12_9_Inch
+        case CGSize(width: 1668, height: 2388): return .dt_iPad_Pro_11_Inch
+        case CGSize(width: 1668, height: 2224): return .dt_iPad_Pro_10_5_Inch
+        case CGSize(width: 1620, height: 2160): return .dt_iPad_10_2_Inch
         default: return .dt_unknown
         }
     }
     
     /// 判断当前设备是不是iPhone设备
     public var isPhone: Bool {
-        return UIDevice.current.userInterfaceIdiom == .phone
+        return userInterfaceIdiom == .phone
     }
     
     /// 判断当前设备是不是iPad设备
     public var isPad: Bool {
-        return UIDevice.current.userInterfaceIdiom == .pad
-    }
-    
-    /// 判断当前设备是不是iPad mini
-    public var isPadMini: Bool {
-        return deviceType == .dt_iPad_Mini || deviceType == .dt_iPad_Mini_Retina
+        return userInterfaceIdiom == .pad
     }
     
     /// 判断当前设备是不是iPhone4
@@ -116,12 +147,12 @@ extension UIDevice {
     
     /// 状态栏的高度
     public var statusBarHeight: CGFloat {
-        return isIPhoneX ? 44 : 20
+        return isNotchScreen ? 44 : 20
     }
     
     /// 下巴的高度
     public var jawHeight: CGFloat {
-        return isIPhoneX ? 34 : 0
+        return isNotchScreen ? 34 : 0
     }
 }
 
