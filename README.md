@@ -6,7 +6,7 @@ DeviceType
 
 1.  判断设备OS的版本
 2.  判断设备是iPhone还是iPad
-3.  通过分辨率判断设备类型：iPhone4S、iPhone5、iPhone6、iPhone6 Plus、iPad、iPad mini、iPad retina、iPad mini retina等
+3.  通过分辨率判断设备类型
 
 
 ### 分辨率
