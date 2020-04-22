@@ -19,10 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         testDevice();
         
-        print(UIScreen.main.currentMode?.size ?? "nil")
-         print(UIScreen.main.bounds.size)
-        print(UIScreen.main.nativeBounds.size, UIScreen.main.scale, UIScreen.main.nativeScale)
-        
         return true
     }
 
@@ -66,23 +62,11 @@ extension AppDelegate {
             print("version < 7.0")
         }
         
-        //iPad or iPhone
-        if device.isPad {
-            print("iPad")
-            
-            if device.isPadMini {
-                print("iPad mini")
-            } else {
-                print("other iPad")
-            }
-        }
-        else if (device.isPhone) {
-            print("iPhone")
-        }
-        
         //Device Type
         let type = device.deviceType
         print(type)
+        
+        print("size =", UIScreen.main.currentMode?.size ?? "nil")
     }
 }
 
